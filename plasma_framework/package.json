@@ -6,13 +6,14 @@
     "test": "test"
   },
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.1.1",
+    "@truffle/hdwallet-provider": "^1.6.0",
     "axios": "^0.19.2",
     "dotenv": "^8.0.0",
     "elliptic": ">=6.5.3",
     "lodash.clonedeep": "^4.5.0",
     "openzeppelin-solidity": "2.3.0",
-    "solidoc": "^1.0.5"
+    "solidoc": "^1.0.5",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@codechecks/client": "^0.1.10",
@@ -38,7 +39,9 @@
     "coverage": "node_modules/.bin/truffle --max-old-space-size=4096 run coverage",
     "docgen": "./scripts/docgen.sh",
     "linter": "node_modules/eslint/bin/eslint.js . --fix",
-    "linter-sol": "node_modules/.bin/solhint --max-warnings 0 \"contracts/**/*.sol\""
+    "linter-sol": "node_modules/.bin/solhint --max-warnings 0 \"contracts/**/*.sol\"",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -48,5 +51,6 @@
   "bugs": {
     "url": "https://github.com/omisego/plasma-contracts/issues"
   },
-  "homepage": "https://github.com/omisego/plasma-contracts#readme"
+  "homepage": "https://github.com/omisego/plasma-contracts#readme",
+  "snyk": true
 }
