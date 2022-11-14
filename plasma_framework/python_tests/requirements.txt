@@ -10,9 +10,9 @@ cytoolz==0.10.0
 eip712-structs==1.1.0
 entrypoints==0.3
 eth-abi==2.0.0
-eth-account==0.4.0
+eth-account==0.5.9
 eth-hash==0.2.0
-eth-keyfile==0.5.1
+eth-keyfile==0.6.0
 eth-keys==0.2.4
 eth-rlp==0.1.2
 eth-tester==0.2.0b2
@@ -64,3 +64,4 @@ web3==5.0.0
 websockets==7.0
 wrapt==1.11.2
 zipp==0.6.0
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
